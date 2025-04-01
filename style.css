@@ -1,65 +1,80 @@
-/* Общие стили */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
+    display: flex;
+    background-color: #202225;
+    color: #ffffff;
 }
 
-/* Контейнер для всего контента */
-#container {
-  background-color: #ffffff;
-  width: 80%;
-  max-width: 800px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #2f3136;
+    padding: 20px;
+    position: fixed;
 }
 
-/* Стили для заголовков */
-h1 {
-  color: #4CAF50;
+.sidebar h2 {
+    color: #00aaff;
+    margin-bottom: 20px;
 }
 
-h2 {
-  color: #333;
-  margin-top: 20px;
+.sidebar ul {
+    list-style: none;
 }
 
-/* Стили для текста */
-p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #555;
+.sidebar ul li {
+    margin: 15px 0;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+.sidebar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
-ul li {
-  font-size: 18px;
-  color: #333;
-  margin-bottom: 10px;
+.sidebar ul li a:hover {
+    background-color: #00aaff;
 }
 
-/* Кнопка */
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+    width: calc(100% - 270px);
 }
 
-button:hover {
-  background-color: #45a049;
+.header h1 {
+    background: linear-gradient(90deg, #00aaff, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.posts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.post {
+    background: #36393f;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.post h3 {
+    color: #00aaff;
 }
